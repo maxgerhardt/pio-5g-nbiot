@@ -1,8 +1,11 @@
 #include <Arduino.h>
 #include <board.h>
 
+#define DSerial SerialUSB
+#define ATSerial Serial1
+
 void setup() {
-    Serial.begin(9600);
+    DSerial .begin(9600);
     pinMode(LED1, OUTPUT);
     pinMode(LED2, OUTPUT);
 }
@@ -13,6 +16,6 @@ void loop() {
     delay(500);
     digitalWrite(LED1, LOW);
     digitalWrite(LED2, LOW);
-    Serial.println("Blinky");
+    DSerial .println("Blinky");
     delay(500);
 }
